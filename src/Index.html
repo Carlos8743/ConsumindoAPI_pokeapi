@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="icon" type="image/jpg" href="./img/pokebola.png">
+    <link rel="stylesheet" href="./Style/Style.css">
+    <link rel="stylesheet" href="./Style/reset.css">
+</head>
+<body>
+    <header class="header">
+        <a id="Title1" class="Title1">Bem Vindo</a> 
+        <a class="Title2">Oque é o Porjeto</a>
+        <a id="Title3" class="Title3">Bestiário</a>
+        <label class="Card">
+            <i> 
+                E um irojeto Front-end que basicamente, 
+                estou consumindo uma API chamada POKEAPI do Site 
+                <a href="https://pokeapi.co">pokeapi.co</a>.
+                Oque você pode fazer e pesquisar na barra de pesquisa que 
+                basicamente ela vai te mostrar o pokemon.
+            </i>
+        </label>
+    </header>
+    <main class="main">
+        <form class="Page">
+            <input class="Page_input" type="text" placeholder="nome do pokemon"/> 
+            <button class="Page_save">Salvar</button>
+        </form>
+        <ul class="Pokemon">
+            <li class="Pokemon_img"><img src="./img/search.svg" alt="Imagem Do Pokemon"></li>
+            <li class="Pokemon_name">Nome</li>
+            <li class="Pokemon_Type">Tipo</li>
+            <li class="Pokemon_Atk">Ataque</li>
+            <li class="Pokemon_Special">Especial</li>
+        </ul>
+    </main>
+    <footer class="footer">
+        <h1>@desenvolvido por Carlos Manuel</h1>
+    </footer>
+    <script src="./js/Script.js"></script>
+</body>
+</html>

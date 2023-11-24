@@ -1,0 +1,122 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Montserrat:wght@100;400;500;700&family=Prata&family=Roboto:wght@700&display=swap');
+
+:root{
+    --font-type1: 'Montserrat', sans-serif;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-blue: #5151ff;
+    --color-red:  #d30000;
+    --color-green: #60ee60;
+}
+*{
+    font-family: var(--font-type1);
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    font-size: 1.5em;
+    padding: 20px 20px;
+    font-weight: 400;
+}
+.header a{
+    cursor: pointer;
+}
+.Titulo{
+    display: flex;
+}
+.Title2{
+    position: relative;
+}
+.Card{
+    display: none;
+    position: relative;
+    top: 100%;
+    font-size: 14px;
+    border: solid var(--color-green) 1px;
+    background: var(--color-white);
+    width: 300px;
+    font-weight: 400;
+    color: var(--color-black);
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+.Title2:hover ~ .Card{
+    display: inline;
+    position: absolute;
+    top: 12%;
+    z-index: 10;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    gap: 10px 10px;
+}
+.Page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Page_input{
+    border: 1px solid var(--color-blue);
+    border-radius: 10px 10px;
+    height: 28px;
+    width: 300px;
+    position: relative;
+}
+.Page_input::placeholder{
+    display: flex;
+    color: var(--color-black);
+    font-weight: 400;
+    align-items: center;
+    text-align: center;
+    background: url('../img/search.svg') no-repeat;
+    background-position: 1em;
+    text-transform: lowercase;
+}
+.Pokemon{
+    display: grid;
+    grid-template-areas: 
+    'img name Atk'
+    'img type special';
+    gap: 20px 20px;
+}
+.Pokemon_img{
+    width: 50px;
+    grid-area: img;
+}
+.Pokemon_name{
+    grid-area: name;
+}
+.Pokemon_Type{
+    grid-area: type;
+}
+.Pokemon_Atk{
+    grid-area: Atk;
+}
+.Pokemon_Special{
+    grid-area: special;
+}
+.footer{
+    font-family: var(--font-type1);
+    background: var(--color-blue);
+    color: var(--color-white);
+    position: absolute;
+    bottom: 0%;
+    display: flex;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px 0px;
+    width: 100%;
+    
+}
