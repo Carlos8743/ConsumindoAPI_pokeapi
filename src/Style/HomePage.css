@@ -8,6 +8,7 @@
     --color-blue: #5151ff;
     --color-red:  #d30000;
     --color-green: #60ee60;
+    --color-light-red: #ff525283;
 }
 *{
     font-family: var(--font-type1);
@@ -90,8 +91,12 @@
     border: 0px solid ;    
     border-radius: 10px 10px;
 }
-.erro{
+.Erro{
     display: none;
+    border: 1px solid var(--color-red);
+    border-radius: 10px 10px;
+    padding: 10px 10px;
+    background: var(--color-light-red);
 }
 .Page .Page_save{
     background: var(--color-green);
@@ -102,11 +107,12 @@
 }
 
 .Pokemon{
+    font-size: 24px;
     display: grid;
     grid-template-areas: 
-    'img name Atk '
-    'img type special'
-    'img Atktwo Atktwo';
+    'name name'
+    'img type'
+    'img Atk';
     gap: 20px 20px;
     height: 400px;
     width: 80%;
@@ -116,10 +122,14 @@
     grid-area: img;
 }
 .Pokemon_img img{
-    width: 100%;
+    width: 50%;
 }
 .Pokemon_name{
     grid-area: name;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
 }
 .Pokemon_Type{
     grid-area: type;
@@ -127,24 +137,44 @@
 .Pokemon_Atk{
     grid-area: Atk;
 }
-.Pokemon_Special{
-    grid-area: special;
-}
-.Pokemon_Atk2{
-    grid-area: Atktwo;
-}
 .footer{
     font-family: var(--font-type1);
     background: var(--color-blue);
     color: var(--color-white);
     position: absolute;
     bottom: 0%;
-    display: flex;
+    left: 0;
     font-weight: 400;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     flex-direction: row;
     padding: 10px 0px;
     width: 100%;
     
+}
+@media screen and (max-width: 700px){
+    .header a{
+        font-size: 14px;
+    }
+    .Page{
+        flex-wrap: wrap;
+    }
+    .Page .Page_input{
+        width: 95%;
+    }
+    .Pokemon_img img{
+        width: 50%;
+    }
+    .Pokemon{
+        grid-template-areas: 
+        'name name'
+        'img img'
+        'Atk type';
+    }
+    .Pokemon li{
+        font-size: 16px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+        
 }
